@@ -39,52 +39,60 @@ At its core, Conway's Game of Life is a deceptively simple experiment in emergen
 - Liskov Substitution: Any subclass of IGrid could be used by the simulator.
 - Interface Segregation: Classes interact through well-defined interfaces (ICell, IGrid, IStorage).
 - Dependency Inversion: Higher-level classes depend on abstractions (interfaces), not concrete persistence implementations.
-### JSON Data Persistence: Implement with System.Text.Json to effectively manage grid data.
-- Exception Handling and Input Validation: Implement robust error handling and user input validation.
-- Git for Collaborative Coding: Utilize Git for managing collaborative development.
-- xUnit Testing: Utilize xUnit for thorough unit testing of grid updates, cell behavior, rule applications, and JSON persistence.
+### JSON Data Persistence:
+- Implement with System.Text.Json to effectively manage grid data.
+Exception Handling and Input Validation: 
+- Implement robust error handling and user input validation.
+### Git for Collaborative Coding:
+- Utilize Git for managing collaborative development.
+### xUnit Testing:
+- Utilize xUnit for thorough unit testing of grid updates, cell behavior, rule applications, and JSON persistence.
 ## Workflow
 
 - Welcome: The application presents a welcome message.
 
 - Setup Method: The application prompts the user to choose their grid setup:
+    "1. Create a new random grid"
+    "2. Load grid from JSON file"
+ 
+- New Grid Setup (If Option 1 is chosen):
 
-"1. Create a new random grid"
-"2. Load grid from JSON file"
-New Grid Setup (If Option 1 is chosen):
+    - Grid Dimensions: The application prompts for dimensions:
+        - "Enter the number of rows for the grid (4-100): "
+        - "Enter the number of columns for the grid (4-100): "
+    - Grid Initialization: Initializes the grid with a random pattern of living and dead cells.
+     
+-  Load from File (If Option 2 is chosen):
 
-- Grid Dimensions: The application prompts for dimensions:
-"Enter the number of rows for the grid (4-100): "
-"Enter the number of columns for the grid (4-100): "
-- Grid Initialization: Initializes the grid with a random pattern of living and dead cells.
--  oad from File (If Option 2 is chosen):
-
-- File Selection: The application asks the user to provide the path to a JSON file.
-- File Validation: The application validates the file format and ensures the dimensions match any size limits set.
+    - File Selection: The application asks the user to provide the path to a JSON file.
+    - File Validation: The application validates the file format and ensures the dimensions match any size limits set.
 - Simulation Start:
 
-The application displays the initial grid state (whether created new or loaded from file).
-Simulation Loop:
+    -  The application displays the initial grid state (whether created new or loaded from file).
+     
+- Simulation Loop:
 
-- Prompt: The application displays the current generation number and prompts the user to:
-- Press 'N' to advance to the next generation.
-- Press 'S' to save the current grid state to a file.
-- Press 'X' to exit the simulation.
-Input: The application takes user input.
-Action:
-- If 'N', the AutomatonSimulator calculates the next generation and displays the updated grid.
-- If 'S', the JsonStorage saves the current state to a JSON file.
-- If 'X', the simulation terminates.
-Example Grid from Generation 0 to 1
+    - Prompt: The application displays the current generation number and prompts the user to:
+        - Press 'N' to advance to the next generation.
+        - Press 'S' to save the current grid state to a file.
+        - Press 'X' to exit the simulation.
+         
+- Input: The application takes user input.
+- Action:
+    - If 'N', the AutomatonSimulator calculates the next generation and displays the updated grid.
+    - If 'S', the JsonStorage saves the current state to a JSON file.
+    - If 'X', the simulation terminates.
 
-Initial Grid (Generation 0)
+## Example Grid from Generation 0 to 1
 
-..O..
-...O.
-.OOO.
-.....
-'O' represents a live cell.
-'.' represents a dead cell.
+### Initial Grid (Generation 0)
+
+ > ..O..
+ > ...O.
+ > .OOO.
+ > .....
+- 'O' represents a live cell.
+- '.' represents a dead cell.
 Next Generation (Generation 1)
 
 Let's apply the rules of Conway's Game of Life:
@@ -93,9 +101,9 @@ Let's apply the rules of Conway's Game of Life:
 .O.O.
 ..OO.
 ..O..
-JSON File for the Example Grid (Generation 0):
+### JSON File for the Example Grid (Generation 0):
 
-{
+`{
 "rows": 4,  
 "columns": 5,  
 "grid": [
@@ -104,8 +112,8 @@ JSON File for the Example Grid (Generation 0):
 [false, true, true, true, false],
 [false, false, false, false, false],
 ]
-}
-Submission
+}`
+### Submission
 
-GitHub Link: Provide the project's GitHub link. Include MaxDKaos and vzastrow if the repository is private. Ensure the repository contains all necessary source code, unit tests, and documentation.
+- GitHub Link: Provide the project's GitHub link. Include MaxDKaos and vzastrow if the repository is private. Ensure the repository contains all necessary source code, unit tests, and documentation.
 Design Explanation: Include a brief README that outlines how your design decisions reflect SOLID principles.
