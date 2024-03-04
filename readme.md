@@ -6,21 +6,21 @@ At its core, Conway's Game of Life is a deceptively simple experiment in emergen
 
 ### Historical Impact: Beyond its theoretical significance, the Game of Life found practical applications over the years:
 
-### Modeling: Its ability to simulate dynamic systems made it a tool for modeling phenomena such as population growth, urban patterns, and even the behavior of fundamental particles. For instance, cellular automata similar to the Game of Life have been used to simulate the spread of wildfires, aiding in the development of prediction models.
-### Artificial Life: The Game of Life spurred the field of artificial life, where researchers investigate the creation and simulation of life-like behaviors in computational systems. It served as an early inspiration for self-replicating patterns and evolving systems within computer simulations.
-### Computational Implications: Remarkably, Conway's Game of Life has been proven to be Turing-complete. This means it has the same computational power as any modern computer, capable in theory of performing any calculation. For instance, researchers have constructed intricate patterns within the game that can function as logic gates and complex computational structures, demonstrating its capacity to emulate any computer program. This highlights the surprising power that lies within even the simplest sets of well-defined rules.
-### Objective: Develop a console application that simulates Conway's Game of Life, emphasizing SOLID principles for well-structured, maintainable, and testable code. Users should be able to define an initial grid configuration and observe the evolution of patterns over time. Data persistence will be achieved through JSON files, allowing users to maintain their grid configurations across sessions. The project requires collaborative coding using Git and ensures code quality through unit testing with xUnit.
+- Modeling: Its ability to simulate dynamic systems made it a tool for modeling phenomena such as population growth, urban patterns, and even the behavior of fundamental particles. For instance, cellular automata similar to the Game of Life have been used to simulate the spread of wildfires, aiding in the development of prediction models.
+- Artificial Life: The Game of Life spurred the field of artificial life, where researchers investigate the creation and simulation of life-like behaviors in computational systems. It served as an early inspiration for self-replicating patterns and evolving systems within computer simulations.
+- Computational Implications: Remarkably, Conway's Game of Life has been proven to be Turing-complete. This means it has the same computational power as any modern computer, capable in theory of performing any calculation. For instance, researchers have constructed intricate patterns within the game that can function as logic gates and complex computational structures, demonstrating its capacity to emulate any computer program. This highlights the surprising power that lies within even the simplest sets of well-defined rules.
+- Objective: Develop a console application that simulates Conway's Game of Life, emphasizing SOLID principles for well-structured, maintainable, and testable code. Users should be able to define an initial grid configuration and observe the evolution of patterns over time. Data persistence will be achieved through JSON files, allowing users to maintain their grid configurations across sessions. The project requires collaborative coding using Git and ensures code quality through unit testing with xUnit.
 
 ## Required Components:
 
-### ICell Interface: Defines the properties and behaviors of a single cell in the grid (state, neighbors).
-### IGrid Interface: Specifies methods for representing the grid of cells (updating states, getting cell states).
-### IStorage Interface Specifies methods for loading and saving the grid.
-### Cell Class: Implements the ICell interface, representing an individual cell with its state (alive/dead).
-### Grid Class: Implements the IGrid interface, managing a 2D array of cells and the logic for updating cell states in each generation according to Conway's Game of Life rules.
-### JsonStorage Class: Implements the IStorage interface. Handles the saving and loading of grid data to and from JSON files.
-### AutomatonSimulator Class: Manages the overall simulation, applying the Game of Life rules to the Grid over iterations.
-### Program Class (User Interface): Provides a console interface for grid setup, stepping through generations, visualization of the simulation, and saving/loading grid configurations.
+- ICell Interface: Defines the properties and behaviors of a single cell in the grid (state, neighbors).
+- IGrid Interface: Specifies methods for representing the grid of cells (updating states, getting cell states).
+- IStorage Interface Specifies methods for loading and saving the grid.
+- Cell Class: Implements the ICell interface, representing an individual cell with its state (alive/dead).
+- Grid Class: Implements the IGrid interface, managing a 2D array of cells and the logic for updating cell states in each generation according to Conway's Game of Life rules.
+- JsonStorage Class: Implements the IStorage interface. Handles the saving and loading of grid data to and from JSON files.
+- AutomatonSimulator Class: Manages the overall simulation, applying the Game of Life rules to the Grid over iterations.
+- Program Class (User Interface): Provides a console interface for grid setup, stepping through generations, visualization of the simulation, and saving/loading grid configurations.
 
 ## Technical Requirements:
 
