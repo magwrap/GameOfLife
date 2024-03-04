@@ -1,6 +1,18 @@
 # Created by https://www.toptal.com/developers/gitignore/api/vim,windows,macos,rider
 # Edit at https://www.toptal.com/developers/gitignore?templates=vim,windows,macos,rider
 
+### VS Code ###
+.vscode/
+.history/
+.vsix/
+.history
+.ionide
+
+
+### C# ###
+obj/
+bin/
+
 ### macOS ###
 # General
 .DS_Store
