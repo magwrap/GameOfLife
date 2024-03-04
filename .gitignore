@@ -6,6 +6,8 @@
 # C#
 bin/
 obj/
+.idea/
+
 
 # User-specific files
 *.rsuser
